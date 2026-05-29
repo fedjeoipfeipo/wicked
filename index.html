@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Bijan WICKED for Men — Creative Case Study. A breakdown of the dark psychology behind one word that does everything.">
+<title>Bijan WICKED — The Ring That Commands Darkness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+:root{
+  --ink:oklch(8% .01 260);
+  --ink-2:oklch(11% .012 260);
+  --ink-3:oklch(14% .013 260);
+  --blue:oklch(62% .22 265);
+  --blue-soft:oklch(62% .22 265 / .18);
+  --blue-line:oklch(62% .22 265 / .25);
+  --snow:oklch(96% .006 260);
+  --snow-50:oklch(96% .006 260 / .7);
+  --snow-20:oklch(96% .006 260 / .35);
+  --snow-08:oklch(96% .006 260 / .12);
+  --snow-04:oklch(96% .006 260 / .06);
+  --mist:oklch(72% .008 260 / .7);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --xs:.625rem;
+  --sm:.8rem;
+  --md:1rem;
+  --track:.2em;
+  --track-xl:.38em;
+}
+
+body{
+  background:var(--ink);
+  color:var(--snow);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.75;
+  overflow-x:hidden;
+}
+
+/* focus visible for keyboard nav */
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* ── PROGRESS ── */
+#bar{
+  position:fixed;top:0;left:0;
+  height:2px;width:0%;
+  background:var(--blue);
+  box-shadow:0 0 10px var(--blue);
+  z-index:300;
+  transition:width .08s linear;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.6rem 5%;
+}
+.nav-logo{
+  font-family:var(--serif);
+  font-size:.95rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--snow);text-decoration:none;
+}
+.nav-links{display:flex;gap:2.8rem}
+.nav-links a{
+  font-size:var(--xs);letter-spacing:var(--track);
+  text-transform:uppercase;color:var(--snow);
+  text-decoration:none;opacity:.55;
+  transition:opacity .2s;
+}
+.nav-links a:hover{opacity:1}
+.burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:8px;
+  min-width:44px;min-height:44px;
+  justify-content:center;align-items:center;
+}
+.burger span{display:block;width:22px;height:1px;background:var(--snow)}
+
+/* ── HERO ── */
+#hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;align-items:flex-end;
+  overflow:hidden;
+  background:var(--ink);
+}
+
+.hero-inner{
+  position:relative;z-index:2;
+  padding:0 5% 5.5rem;
+  width:100%;
+}
+.hero-eyebrow{
+  display:block;
+  font-size:var(--xs);letter-spacing:var(--track-xl);
+  text-transform:uppercase;color:var(--blue);
+  margin-bottom:2rem;
+  opacity:0;animation:up .9s .15s cubic-bezier(.16,1,.3,1) forwards;
+}
+.hero-h1{
+  font-family:var(--serif);
+  font-size:clamp(3.8rem,9.5vw,10rem);
+  font-weight:900;line-height:.88;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+  color:var(--snow);
+  margin-bottom:2.8rem;
+  opacity:0;animation:up .9s .3s cubic-bezier(.16,1,.3,1) forwards;
+}
+.hero-h1 em{font-style:italic;font-weight:400;color:var(--snow-50)}
+.hero-bar{
+  display:flex;gap:3rem;flex-wrap:wrap;
+  font-size:var(--xs);letter-spacing:var(--track);
+  text-transform:uppercase;color:var(--mist);
+  opacity:0;animation:up .9s .48s cubic-bezier(.16,1,.3,1) forwards;
+}
+.hero-bar b{color:var(--snow-50)}
+
+/* ── RULE ── */
+.rule{width:100%;height:1px;background:var(--snow-04)}
+
+/* ── SECTIONS ── */
+.sect{padding:8rem 5%}
+.wrap{max-width:1100px;margin:0 auto}
+.eyebrow{
+  display:block;margin-bottom:1.4rem;
+  font-size:var(--xs);letter-spacing:var(--track-xl);
+  text-transform:uppercase;color:var(--blue);opacity:.65;
+}
+.heading{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,4.2vw,4rem);
+  font-weight:700;line-height:.9;
+  letter-spacing:-.02em;text-transform:uppercase;
+  color:var(--snow);margin-bottom:2.2rem;
+}
+.heading em{font-style:italic;font-weight:400;color:var(--snow-50)}
+.lead{
+  font-size:var(--md);line-height:1.9;
+  color:var(--snow);opacity:.65;
+  max-width:62ch;
+}
+
+/* ── 01 PROVOCATION ── */
+#prov{background:var(--ink-2)}
+.prov-cols{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:7rem;margin-top:5rem;align-items:start;
+}
+.pull{
+  font-family:var(--serif);
+  font-size:clamp(1.55rem,2.6vw,2.4rem);
+  font-weight:700;line-height:1.06;
+  letter-spacing:-.015em;text-transform:uppercase;
+  color:var(--snow);
+}
+.pull em{font-style:italic;font-weight:400;color:var(--snow-50)}
+.prose p{
+  font-size:var(--md);line-height:1.95;
+  color:var(--snow);opacity:.62;
+  margin-bottom:1.1rem;
+}
+
+/* ── 02 COPY ── */
+#copy{background:var(--ink)}
+.copy-word{
+  font-family:var(--serif);
+  font-size:clamp(3rem,8vw,8rem);
+  font-weight:900;line-height:.86;
+  letter-spacing:-.03em;text-transform:uppercase;
+  color:var(--snow);
+  margin:4.5rem 0;
+  padding:3.5rem 0;
+  border-top:1px solid var(--blue-line);
+  border-bottom:1px solid var(--blue-line);
+}
+.copy-word em{font-style:italic;font-weight:400;color:var(--blue)}
+.levels{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--snow-04);
+  margin-top:4.5rem;
+}
+.level{
+  background:var(--ink);
+  padding:2.8rem 2.2rem;
+  transition:background .3s;
+}
+.level:hover{background:var(--ink-2)}
+.level-n{
+  display:block;margin-bottom:1rem;
+  font-size:var(--xs);letter-spacing:var(--track-xl);
+  text-transform:uppercase;color:var(--blue);opacity:.55;
+}
+.level-title{
+  font-family:var(--serif);
+  font-size:1rem;font-weight:700;
+  letter-spacing:.03em;text-transform:uppercase;
+  color:var(--snow);margin-bottom:.7rem;
+}
+.level-body{
+  font-size:var(--sm);line-height:1.9;
+  color:var(--snow);opacity:.6;
+}
+
+/* ── 03 VISUAL ── */
+#visual{background:var(--ink-3)}
+.vis-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;margin-top:4.5rem;align-items:start;
+}
+.vis-blocks{}
+.vis-block{
+  padding:1.4rem 0;
+  border-top:1px solid var(--blue-line);
+  margin-bottom:.2rem;
+}
+.vis-block + .vis-block{margin-top:0}
+.vis-label{
+  font-size:var(--xs);letter-spacing:var(--track-xl);
+  text-transform:uppercase;color:var(--blue);
+  opacity:.9;margin-bottom:.5rem;
+}
+.vis-text{
+  font-size:var(--sm);line-height:1.95;
+  color:var(--snow);opacity:.62;
+}
+.vis-photo-wrap{
+  position:sticky;
+  top:8rem;
+  width:100%;
+}
+.vis-photo{
+  width:100%;
+  display:block;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:center center;
+  filter:brightness(.95) saturate(1.15) contrast(1.05);
+  image-rendering:high-quality;
+  box-shadow:0 40px 120px rgba(0,0,0,.7), 0 0 0 1px oklch(62% .22 265 / .08);
+}
+
+/* ── 04 PSYCHOLOGY ── */
+#psych{background:var(--ink)}
+.psych-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--snow-04);
+  margin-top:4.5rem;
+}
+.psych-card{
+  background:var(--ink);
+  padding:3rem 2.2rem;
+  position:relative;overflow:hidden;
+}
+.psych-card::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:var(--blue);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.psych-card:hover::after{transform:scaleX(1)}
+.roman{
+  font-family:var(--serif);
+  font-size:clamp(3.5rem,5vw,5.5rem);
+  font-weight:900;line-height:1;
+  color:oklch(55% .22 265 / .05);
+  margin-bottom:1.2rem;
+}
+.psych-title{
+  font-family:var(--serif);
+  font-size:.95rem;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;
+  color:var(--snow);margin-bottom:.8rem;
+  padding-top:1rem;
+  border-top:1px solid var(--blue-line);
+}
+.psych-body{
+  font-size:var(--sm);line-height:1.9;
+  color:var(--snow);opacity:.6;
+}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:1.4rem}
+.tag{
+  font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue);border:1px solid var(--blue-line);
+  padding:.2rem .55rem;opacity:.7;
+}
+
+/* ── 05 TAKEAWAY ── */
+#take{background:var(--ink-2)}
+.take-wrap{max-width:820px}
+.big-quote{
+  font-family:var(--serif);
+  font-size:clamp(1.55rem,3vw,2.6rem);
+  font-weight:700;line-height:1.08;
+  letter-spacing:-.015em;text-transform:uppercase;
+  color:var(--snow);
+  margin:3rem 0;
+  padding:3rem 0;
+  border-top:1px solid var(--blue-line);
+  border-bottom:1px solid var(--snow-08);
+}
+.take-body{
+  font-size:var(--md);line-height:1.95;
+  color:var(--snow);opacity:.62;
+  margin-bottom:1.1rem;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);
+  padding:4rem 5%;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:1.2rem;
+  border-top:1px solid var(--snow-04);
+}
+.f-brand{
+  font-family:var(--serif);
+  font-size:1rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--snow);
+}
+.f-meta{
+  font-size:var(--xs);letter-spacing:var(--track);
+  text-transform:uppercase;
+  color:var(--snow-20);
+  text-align:right;line-height:2.2;
+}
+.f-meta span{color:var(--snow)}
+
+/* ── REVEAL ── */
+.r{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.r.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}
+.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.d5{transition-delay:.4s}
+
+@keyframes up{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+
+/* ── MOBILE ── */
+@media(max-width:860px){
+  .nav-links{display:none}
+  .nav-links.open{
+    display:flex;flex-direction:column;
+    position:fixed;inset:0;background:var(--ink);
+    z-index:190;justify-content:center;align-items:center;gap:2.5rem;
+  }
+  .nav-links.open a{font-size:1.05rem;opacity:.65}
+  .burger{display:flex}
+  .hero-img{object-position:62% 18%}
+  .hero-inner{padding:0 5% 4.5rem}
+  .prov-cols,.vis-grid{grid-template-columns:1fr}
+  .levels,.psych-grid{grid-template-columns:1fr}
+  .vis-photo{width:100%;aspect-ratio:3/4;box-shadow:none}
+  .vis-photo-wrap{position:static}
+  .sect{padding:5rem 5%}
+  footer{flex-direction:column;align-items:flex-start}
+  .f-meta{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){
+  .r,.r.on{opacity:1;transform:none;transition:none}
+  .hero-eyebrow,.hero-h1,.hero-bar{animation:none;opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="bar"></div>
+
+<nav aria-label="Main navigation">
+  <a class="nav-logo" href="#">Bijan</a>
+  <div class="nav-links" id="navLinks">
+    <a href="#prov">Provocation</a>
+    <a href="#copy">Copy</a>
+    <a href="#visual">Visual</a>
+    <a href="#psych">Psychology</a>
+    <a href="#take">Takeaway</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Creative Case Study · WICKED for Men</span>
+    <h1 class="hero-h1">The Ring<br>That Commands<br><em>Darkness.</em></h1>
+    <div class="hero-bar">
+      <span>Campaign — <b>Bijan 2026</b></span>
+      <span>Analysis — <b>Copy · Visual · Psychology</b></span>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- 01 -->
+<section class="sect" id="prov">
+  <div class="wrap">
+    <span class="eyebrow r">01 — The Provocation</span>
+    <h2 class="heading r d1">Every fragrance ad<br>sells you an <em>experience.</em><br>This one sells<br>a <em>presence.</em></h2>
+    <div class="prov-cols">
+      <div class="r d2">
+        <p class="pull">One bottle. <em>Complete darkness.</em> A blue ring glowing from the void at its center. No people. No context. <em>No explanation.</em></p>
+      </div>
+      <div class="prose r d3">
+        <p>Every fragrance ad sells you a moment. A man on a beach. A sunset. A glance. The product enters last, as the key to a world you're supposed to want.</p>
+        <p>The WICKED ad doesn't have a world. It has a bottle and a ring of cold blue light. Nothing else. No lifestyle promise. No aspirational figure. No emotion handed to you on arrival.</p>
+        <p>Just one word at the bottom. And the decision is entirely yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- 02 -->
+<section class="sect" id="copy">
+  <div class="wrap">
+    <span class="eyebrow r">02 — The Copy</span>
+    <h2 class="heading r d1">One word.<br>No explanation.<br><em>No apology.</em></h2>
+    <p class="lead r d2">WICKED is not a description. It's not a tagline. It's a declaration — and the brand's confidence in placing it on a luxury object without qualification is the entire argument.</p>
+    <div class="copy-word r d3"><em>Wicked.</em><br>bijan.</div>
+    <div class="levels">
+      <div class="level r">
+        <span class="level-n">Level 01</span>
+        <p class="level-title">The Dictionary Hit</p>
+        <p class="level-body">Evil. Destructive. Outside the rules. The word carries negative charge by design — chosen not despite the meaning, but because of it. Most luxury brands run from danger. Bijan walked straight toward it.</p>
+      </div>
+      <div class="level r d1">
+        <span class="level-n">Level 02</span>
+        <p class="level-title">Reactance Theory</p>
+        <p class="level-body">When something is labeled WICKED, it doesn't trigger fear — it triggers curiosity. The brain hears a warning and moves closer. The copy isn't selling beauty. It's selling the pull of danger, which is a far stronger force.</p>
+      </div>
+      <div class="level r d2">
+        <span class="level-n">Level 03</span>
+        <p class="level-title">Identity Signaling</p>
+        <p class="level-body">People buy products that express the version of themselves they want to be. WICKED says: there's a part of you that doesn't follow rules. This fragrance doesn't create that part. It acknowledges it was already there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule" style="background:oklch(96% .006 260 / .03)"></div>
+
+<!-- 03 -->
+<section class="sect" id="visual">
+  <div class="wrap">
+    <span class="eyebrow r">03 — Visual Architecture</span>
+    <h2 class="heading r d1">Light from below.<br><em>Everything else:</em><br>darkness.</h2>
+    <div class="vis-grid">
+      <div class="vis-blocks r d2">
+        <div class="vis-block">
+          <p class="vis-label">The Bottle as Object</p>
+          <p class="vis-text">The Bijan donut shape is an architectural paradox. A fragrance bottle is by nature sealed, complete, whole. Here there's a void — a hole through the center. The absence is part of the form. In the WICKED ad, that hole is the hero. The blue ring glows from inside it like a window into something deeper.</p>
+        </div>
+        <div class="vis-block">
+          <p class="vis-label">The Lighting as Statement</p>
+          <p class="vis-text">Upward blue glow from beneath. Most luxury photography lights from above — mimicking the sun, nature, optimism. WICKED inverts that deliberately. In human psychology, light from below is wired to mystery: caves, deep water, screens in the dark.</p>
+        </div>
+        <div class="vis-block">
+          <p class="vis-label">The Surface</p>
+          <p class="vis-text">Volcanic stone. Not white marble. Not clean concrete. Rock that is rough, ancient, built to withstand enormous heat. The surface says exactly what the name says — without needing to say anything at all.</p>
+        </div>
+        <div class="vis-block">
+          <p class="vis-label">The Crystal Cap</p>
+          <p class="vis-text">The ribbed spherical cap catches the cold rim light like a cut diamond. In a frame that is otherwise pure darkness, it functions as the single point of precision — proof that underneath the WICKED aesthetic, there is craftsmanship.</p>
+        </div>
+      </div>
+      <div class="r d3">
+        <div class="vis-photo-wrap">
+          <img src="images/wicked.webp" alt="Bijan WICKED for Men advertisement" class="vis-photo" loading="lazy" width="800" height="1000">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule" style="background:oklch(96% .006 260 / .03)"></div>
+
+<!-- 04 -->
+<section class="sect" id="psych">
+  <div class="wrap">
+    <span class="eyebrow r">04 — Psychology Breakdown</span>
+    <h2 class="heading r d1">Three principles.<br>One ad that<br><em>doesn't sell.</em><br>It selects.</h2>
+    <div class="psych-grid">
+      <div class="psych-card r">
+        <div class="roman">I</div>
+        <h3 class="psych-title">Reactance Theory</h3>
+        <p class="psych-body">Tell someone something is WICKED and they don't retreat — they investigate. The label creates dissonance: how can something luxurious be wicked? That dissonance is what makes you stop. Every second you stop, the brand embeds deeper in memory.</p>
+        <div class="tags"><span class="tag">Brehm 1966</span><span class="tag">Danger Pull</span><span class="tag">Forbidden Appeal</span></div>
+      </div>
+      <div class="psych-card r d1">
+        <div class="roman">II</div>
+        <h3 class="psych-title">Dark Triad Appeal</h3>
+        <p class="psych-body">The WICKED ad doesn't sell "successful man." It sells a man who doesn't explain himself. Mystery, extreme confidence, and autonomy attract attention in ways logic can't account for. That difference is enormous in purchase motivation.</p>
+        <div class="tags"><span class="tag">Paulhus & Williams</span><span class="tag">Silent Power</span><span class="tag">No Justification</span></div>
+      </div>
+      <div class="psych-card r d2">
+        <div class="roman">III</div>
+        <h3 class="psych-title">Scarcity by Identity</h3>
+        <p class="psych-body">No "Limited Edition." No "Exclusive." But complete darkness and volcanic stone both say: this is not for everyone. The scarcity isn't in quantity — it's in identity. Not everyone can carry the word WICKED. That's the most powerful scarcity of all.</p>
+        <div class="tags"><span class="tag">Identity Scarcity</span><span class="tag">Exclusion by Nature</span><span class="tag">No Price Needed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule" style="background:oklch(96% .006 260 / .03)"></div>
+
+<!-- 05 -->
+<section class="sect" id="take">
+  <div class="wrap">
+    <div class="take-wrap">
+      <span class="eyebrow r">05 — The Takeaway</span>
+      <h2 class="heading r d1">The name drew<br>the ad. The ad<br><em>translated the name.</em></h2>
+      <p class="big-quote r d2">"In branding, the name itself can be the entire creative brief. With WICKED, every visual decision is a translation of one word."</p>
+      <p class="take-body r d3">Every decision — the color, the lighting, the texture, the typography — is a visual translation of that single word. No mood board needed. No tagline to explain. No lifestyle promise required. The name did all of it.</p>
+      <p class="take-body r d4">That's one of the hardest things in creative direction: trusting one word completely and building everything on it without adding anything else to cover yourself.</p>
+      <p class="take-body r d5">The WICKED ad was brave enough to try. One bottle. One word. Complete darkness. And a ring of cold blue light that stays with you long after you've scrolled past it.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="f-brand">Bijan</span>
+  <div class="f-meta">
+    <p>Creative Case Study · WICKED for Men · <span>2026</span></p>
+    <p>Design & Analysis by <span>Mostafa Yasser</span></p>
+  </div>
+</footer>
+
+<script>
+// progress
+const bar=document.getElementById('bar');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+
+// reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}
+  });
+},{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+
+// nav
+const burger=document.getElementById('burger'),nav=document.getElementById('navLinks');
+burger.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+  burger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  nav.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  burger.setAttribute('aria-label','Open navigation menu');
+}));
+</script>
+</body>
+</html>
